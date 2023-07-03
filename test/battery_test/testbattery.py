@@ -11,7 +11,7 @@ sys.path.append(BASE_DIR)
 class TestSpindler(unittest.TestCase):
     def battery_should_be_serviced(self):
         current_date = datetime.today().date()
-        last_service_date = current_date.replace(year = current_date.year - 5)
+        last_service_date = current_date.replace(year = current_date.year - 4)
 
         car_battery = battery.spindlerbattery.SpindlerBattery(last_service_date, current_date)
         self.assertTrue(car_battery.needs_service())
